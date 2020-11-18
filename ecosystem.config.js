@@ -29,7 +29,7 @@ module.exports = {
       ssh_options: 'StrictHostKeyChecking=no',
       path: '/home/nuxt/profile-nuxt/production',
       'post-deploy':
-        'yarn && npm run build &&  pm2 reload ecosystem.config.js --env production',
+        'yarn && npm run build &&  pm2 startOrRestart ecosystem.config.js --env production',
     },
   },
 }
