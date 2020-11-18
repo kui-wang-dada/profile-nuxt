@@ -1,3 +1,4 @@
+const path = require('path')
 export default {
   server: {
     host: '0.0.0.0',
@@ -13,9 +14,9 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-
+  loading: { color: '#3B8070' },
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['ant-design-vue/dist/antd.css'],
+  css: ['ant-design-vue/dist/antd.css', 'assets/css/transition.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: ['@/plugins/antd-ui'],
@@ -36,5 +37,26 @@ export default {
   axios: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    extend(config, ctx) {
+      config.resolve.alias['@'] = path.resolve(__dirname, './')
+
+      if (ctx.isClient && !ctx.isDev) {
+        config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true
+        config.optimization.minimizer[0].options.terserOptions.compress.drop_debugger = true
+        config.optimization.minimizer[0].options.terserOptions.compress.warnings = false
+      }
+    },
+    loaders: {
+      less: {
+        lessOptions: {
+          javascriptEnabled: true,
+          modifyVars: {
+            'primary-color': '#4169e2',
+            'link-color': '#4169e2',
+          },
+        },
+      },
+    },
+  },
 }

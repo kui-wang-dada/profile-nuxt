@@ -1,20 +1,32 @@
 <template>
   <div>
-    <Nuxt />
+    <a-layout>
+      <a-layout-header><HeaderTop></HeaderTop></a-layout-header>
+      <a-layout-content> <Nuxt /></a-layout-content>
+      <a-layout-footer>Footer</a-layout-footer>
+    </a-layout>
   </div>
 </template>
+<script>
+import { HeaderTop } from '@/components'
+export default {
+  components: { HeaderTop },
+  props: {},
+  data() {
+    return {}
+  },
+  computed: {},
+  created() {},
+  mounted() {},
+  watch: {},
+  methods: {},
+}
+</script>
 
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
