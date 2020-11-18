@@ -25,7 +25,8 @@ module.exports = {
       user: 'root',
       host: '47.105.223.108',
       ref: 'origin/main',
-      repo: 'https://github.com/wangkui1991/profile-nuxt.git',
+      repo: 'git@github.com:wangkui1991/profile-nuxt.git',
+      ssh_options: 'StrictHostKeyChecking=no',
       path: '/home/nuxt/profile-nuxt/production',
       'post-deploy':
         'yarn && npm run build &&  pm2 reload ecosystem.config.js --env production',
