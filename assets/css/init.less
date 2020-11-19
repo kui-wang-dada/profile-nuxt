@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system-font, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI,
+    Microsoft YaHei, Arial, sans-serif;
+  color: #2c3e50;
+  font-size: 14px;
+  background-color: #f7f9fa;
+  line-height: normal;
+}
+
+a {
+  font-style: normal;
+  text-decoration: none;
+  color: #304455;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+
+  &:hover {
+    color: #304455;
+  }
+}
+
+li {
+  list-style-type: none;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+input,
+img,
+button {
+  border: none;
+  outline: none;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-weight: 600;
+  color: #333;
+  text-rendering: optimizelegibility;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+.theme-default-content:not(.custom) > h1:first-child,
+.theme-default-content:not(.custom) > h2:first-child,
+.theme-default-content:not(.custom) > h3:first-child,
+.theme-default-content:not(.custom) > h4:first-child,
+.theme-default-content:not(.custom) > h5:first-child,
+.theme-default-content:not(.custom) > h6:first-child {
+  margin-bottom: 1rem;
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     font-size: 100%;
+//     font-weight: 400;
+// }
+
+// h1, h2, h3, h4, strong {
+//     font-weight: 600;
+//     color: #273849;
+// }
+
+// h3 {
+//     display: block;
+//     font-size: 1.17em;
+//     margin-block-start: 1em;
+//     margin-block-end: 1em;
+//     margin-inline-start: 0px;
+//     margin-inline-end: 0px;
+// }
+
+i,
+em {
+  font-style: normal;
+}
+
+input[type='number'],
+textarea {
+  -moz-appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button,
+input[type='submit'],
+input[type='search'],
+input[type='reset'] {
+  -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #bebebe;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #bebebe;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #bebebe;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #bebebe;
+}

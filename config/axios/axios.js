@@ -1,14 +1,9 @@
 /** @format */
 
-import axios from "axios";
+import axios from 'axios';
 
-import { AXIOS_DEFAULT_CONFIG } from "@/config";
-import {
-  requestSuccessFunc,
-  requestFailFunc,
-  responseSuccessFunc,
-  responseFailFunc
-} from "@/config/axios/intercept";
+import { AXIOS_DEFAULT_CONFIG } from '@/config';
+import { requestSuccessFunc, requestFailFunc, responseSuccessFunc, responseFailFunc } from '@/config/axios/intercept';
 
 let axiosInstance = {};
 axiosInstance = axios.create(AXIOS_DEFAULT_CONFIG);

@@ -16,10 +16,10 @@ export default {
   },
   loading: { color: '#3B8070' },
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['ant-design-vue/dist/antd.css', 'assets/css/transition.css'],
+  css: ['ant-design-vue/dist/antd.css', 'assets/css/transition.css', 'assets/css/init.less'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['@/plugins/antd-ui'],
+  plugins: ['@/plugins/antd-ui', '@/plugins/utils'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
